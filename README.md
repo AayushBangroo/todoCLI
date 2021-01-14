@@ -17,6 +17,8 @@ change light bulb
 
 ## Usage
 
+Use the command "g++ todo.cpp" to generate the output file
+
 ### 1. Help
 
 Executing the command without any arguments, or with a single argument `help` prints the CLI usage.
