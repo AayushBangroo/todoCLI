@@ -6,33 +6,14 @@ A simple CLI based todo list command-line (CLI) program that lets you manage you
 
 1. The app can be run in the console with `./todo`.
 
-2. The app should read from and write to a `todo.txt` text file. Each todo item occupies a single line in this file. Here is an example file that has 2 todo items.
+2. The app reads from and write to a `data.txt` text file. Each todo item occupies a single line in this file. Here is an example file that has 2 todo items.
 
 ```txt
 water the plants
 change light bulb
 ```
 
-3.  When a todo item is completed, it should be removed from `todo.txt` and instead added to the `done.txt` text file. This file has a different format:
-
-    ```txt
-    x 2020-06-12 the text contents of the todo item
-    ```
-
-    1. the letter x
-    2. the current date in `yyyy-mm-dd` format
-    3. the original text
-
-    The date when the todo is marked as completed is recorded in the `yyyy-mm-dd` format (ISO 8601). For example, a date like `15th August, 2020` is represented as `2020-08-15`.
-
-4.  The application must open the files `todo.txt` and `done.txt` from where the app is run, and not where the app is located. For example, if we invoke the app like this:
-
-    ```
-    $ cd /path/to/plans
-    $ /path/to/apps/todo ls
-    ```
-
-    The application should look for the text files in `/path/to/plans`, since that is the user’s current directory.
+3.  When a todo item is completed, it is removed from `data.txt` and increases value in `count.txt` text file. This file has a different format:
 
 ## Usage
 
@@ -110,7 +91,3 @@ Use the `report` command to see the latest tally of pending and completed todos.
 $ ./todo report
 yyyy-mm-dd Pending : 1 Completed : 4
 ```
-
-## Improving README.md
-
-If you feel like we are missing out steps, feel free to make a pull request. [Github Repo](https://github.com/nseadlc-2020/package-todo-cli-task)
